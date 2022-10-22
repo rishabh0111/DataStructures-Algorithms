@@ -111,7 +111,10 @@ int main() {
   L.push_back(tail,24);
   L.print(head);
 
-  // L.search(21);
+  if(L.empty())
+    cout << "List is empty";
+  else
+    cout << "List is not empty";
 
   return 0;
 }
