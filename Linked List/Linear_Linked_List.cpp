@@ -24,6 +24,7 @@ class LinkedList {
     bool search(int x);
     void erase(int val);
     void print();
+    int size();
     bool empty();
 
     LinkedList() { head = NULL; }
@@ -128,6 +129,16 @@ void LinkedList::print() {
   cout << endl;
 }
 
+int LinkedList::size() {
+  int len = 0;
+  Node* temp = head;
+  while(temp != NULL) {
+      len++;
+      temp = temp->next;
+  }
+  return len;
+}
+
 // List empty or not
 bool LinkedList::empty() {
   if(head == NULL)
@@ -163,6 +174,8 @@ int main() {
   cout << endl;
   L.search(33) ? cout << "Yes": cout << "No";
   cout << endl;
+
+  cout << "Length of list is: " << L.size() << endl;
 
   L.empty() ? cout << "List is empty": cout << "List is not empty";
   cout << endl;
