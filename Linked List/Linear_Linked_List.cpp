@@ -32,16 +32,28 @@ class LinkedList {
 
 // Insert element at Front
 void LinkedList::push_front(int d) {
-  Node* temp = new Node(d);
-  temp -> next = head;
-  head = temp;
+  if(head == NULL) { //empty list
+    Node* temp = new Node(d);
+    head = temp;
+    tail = temp;
+  } else {
+    Node* temp = new Node(d);
+    temp -> next = head;
+    head = temp;
+  }
 }
 
 // Insert element at Back
 void LinkedList::push_back(int d) {
-  Node* temp = new Node(d);
-  tail-> next = temp;
-  tail = temp;
+  if(head == NULL) { //empty list
+    Node* temp = new Node(d);
+    head = temp;
+    tail = temp;
+  } else {
+    Node* temp = new Node(d);
+    tail-> next = temp;
+    tail = temp;
+  }
 }
 
 // Insert element at required position
@@ -54,6 +66,7 @@ void LinkedList::insert(int position, int d) {
 
   Node *temp = head;
   int cnt = 1;
+
   while (cnt < position - 1)
   {
     temp = temp -> next;
