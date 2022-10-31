@@ -13,7 +13,7 @@ class StackNode {
 	void display();
 } *top;
 
-// Insert element at top
+// Insert element at top:
 bool StackNode::push(int x) {
 	StackNode* temp = new StackNode();
 	if(!temp) {
@@ -31,7 +31,7 @@ bool StackNode::isEmpty() {
 	return (top == NULL);
 }
 
-// Returns top element
+// Returns top element:
 int StackNode::peek() {
 	if(!isEmpty())
 		return top -> data;
@@ -39,7 +39,7 @@ int StackNode::peek() {
 		return 0;
 }
 
-// Remove element at top
+// Remove element at top:
 int StackNode::pop() {
 	StackNode* temp;
 
@@ -74,7 +74,7 @@ void StackNode::display() {
 }
 
 int main() {
-  StackNode s;
+    StackNode s;
 	s.push(11);
 	s.push(22);
 	s.push(33);

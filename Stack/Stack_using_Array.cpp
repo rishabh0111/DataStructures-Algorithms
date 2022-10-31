@@ -16,7 +16,7 @@ class Stack {
 		void display();
 };
 
-// Insert element at top
+// Insert element at top:
 bool Stack::push(int x) {
 	if (top >= MAX - 1) {
 		cout << "Stack Overflow";
@@ -29,7 +29,7 @@ bool Stack::push(int x) {
 	}
 }
 
-// Remove element at top
+// Remove element at top:
 int Stack::pop() {
 	if (top < 0) {
 		cout << "Stack is Empty";
@@ -41,7 +41,7 @@ int Stack::pop() {
 	}
 }
 
-// Returns top element
+// Returns top element:
 int Stack::peek() {
 	if ( top < 0) {
 		cout << "Stack is Empty";
