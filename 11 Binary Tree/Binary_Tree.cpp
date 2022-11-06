@@ -20,11 +20,17 @@ class BinaryTree {
         root = NULL;
     }
 
-    void levelOrderTraversal();
     Node* insert(int data);
+    //Traversals:
+    void levelOrder();
+    void preOrder(Node *root);
+    void inOrder(Node *root);
+    void postOrder(Node *root);
+    //Search:
+    bool Search(Node *root, int key);
 };
 
-void BinaryTree::levelOrderTraversal() {
+void BinaryTree::levelOrder() {
     queue<Node*> q;
     q.push(root);
     q.push(NULL);
@@ -86,6 +92,46 @@ Node* BinaryTree::insert(int data) {
     return NULL;
 }
 
+void BinaryTree::preOrder(Node* root) {
+    if(root == NULL) {
+        return;
+    }
+    cout << root->data << " ";
+    preOrder(root->left);
+    preOrder(root->right);
+}
+
+void BinaryTree::inOrder(Node* root) {
+    if(root == NULL) {
+        return;
+    }
+    inOrder(root->left);
+    cout << root->data << " ";
+    inOrder(root->right);
+}
+
+void BinaryTree::postOrder(Node* root) {
+    if(root == NULL) {
+        return;
+    }
+    postOrder(root->left);
+    postOrder(root->right);
+    cout << root->data << " ";
+}
+
+bool BinaryTree::Search(Node* root, int key){
+    if(root == NULL)
+        return false;
+    if(root->data == key)
+        return true;
+
+    bool res1 = Search(root->left, key);
+    if(res1) return true;
+
+    return Search(root->right, key);
+}
+
+
 int main()
 {
     BinaryTree t;
@@ -97,13 +143,28 @@ int main()
     t.root->right->right = new Node(8);
 
     cout << "Level-order traversal before insertion:" << endl;
-    t.levelOrderTraversal();
+    t.levelOrder();
 
     int key = 12;
     t.root = t.insert(key);
 
     cout << "Level-order traversal after insertion:" << endl;
-    t.levelOrderTraversal();
+    t.levelOrder();
+
+    cout << "Preorder traversal is: ";
+    t.preOrder(t.root);
+    cout << endl;
+    cout << "Inorder traversal is: ";
+    t.inOrder(t.root);
+    cout << endl;
+    cout << "Postorder traversal is: ";
+    t.postOrder(t.root);
+    cout << endl;
+
+    if(t.Search(t.root, 11))
+        cout << "Yes";
+    else
+        cout << "NO";
 
     return 0;
 }
