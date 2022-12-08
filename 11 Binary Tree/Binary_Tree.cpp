@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <queue>
 using namespace std;
 
 class Node {
@@ -20,7 +21,7 @@ class BinaryTree {
         root = NULL;
     }
 
-    Node* insert(int data);
+    void insert(int data);
     //Traversals:
     void levelOrder();
     void preOrder(Node *root);
@@ -58,11 +59,11 @@ void BinaryTree::levelOrder() {
     }
 }
 
-Node* BinaryTree::insert(int data) {
+void BinaryTree::insert(int data) {
     // If tree is empty, assign new node address to root
     if(root == NULL){
         root = new Node(data);
-        return root;
+        return;
     }
 
     // Else, do level order traversal until we find an empty
@@ -79,41 +80,37 @@ Node* BinaryTree::insert(int data) {
             q.push(temp->left);
         else {
             temp -> left = new Node(data);
-            return root;
+            return;
         }
 
         if(temp -> right != NULL)
             q.push(temp->right);
         else {
             temp -> right = new Node(data);
-            return root;
+            return;
         }
     }
-    return NULL;
 }
 
 void BinaryTree::preOrder(Node* root) {
-    if(root == NULL) {
+    if(root == NULL)
         return;
-    }
     cout << root->data << " ";
     preOrder(root->left);
     preOrder(root->right);
 }
 
 void BinaryTree::inOrder(Node* root) {
-    if(root == NULL) {
+    if(root == NULL)
         return;
-    }
     inOrder(root->left);
     cout << root->data << " ";
     inOrder(root->right);
 }
 
 void BinaryTree::postOrder(Node* root) {
-    if(root == NULL) {
+    if(root == NULL)
         return;
-    }
     postOrder(root->left);
     postOrder(root->right);
     cout << root->data << " ";
@@ -131,7 +128,6 @@ bool BinaryTree::Search(Node* root, int key){
     return Search(root->right, key);
 }
 
-
 int main()
 {
     BinaryTree t;
@@ -146,7 +142,7 @@ int main()
     t.levelOrder();
 
     int key = 12;
-    t.root = t.insert(key);
+    t.insert(key);
 
     cout << "Level-order traversal after insertion:" << endl;
     t.levelOrder();
@@ -154,9 +150,11 @@ int main()
     cout << "Preorder traversal is: ";
     t.preOrder(t.root);
     cout << endl;
+
     cout << "Inorder traversal is: ";
     t.inOrder(t.root);
     cout << endl;
+
     cout << "Postorder traversal is: ";
     t.postOrder(t.root);
     cout << endl;
