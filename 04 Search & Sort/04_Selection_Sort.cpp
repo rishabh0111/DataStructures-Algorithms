@@ -37,3 +37,10 @@ int main() {
 
     return 0;
 }
+
+/*
+"Pushes smallest elements to start"
+Time Complexity: O(N^2) -> two loops
+Auxiliary Space: O(1) -> temporary variables
+Stability -> The default implementation is not stable. However, it can be made stable.
+*/
