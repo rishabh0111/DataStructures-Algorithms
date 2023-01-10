@@ -60,3 +60,12 @@ int main() {
 
     return 0;
 }
+
+/*
+Best and Average Case Time Complexity: O(NlogN)
+Worst Case Time Complexity: O(N^2) : When array is already sorted
+Auxiliary Space: 0(logN)
+Algorithmic Paradigm: Divide and Conquer
+Stable: No
+In-Place: Yes
+*/
