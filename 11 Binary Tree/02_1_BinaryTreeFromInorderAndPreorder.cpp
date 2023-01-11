@@ -22,19 +22,22 @@ class BinaryTree {
 };
 
 int findPosition(int in[], int element, int n) {
-        for(int i=0; i < n; i++) {
-            if(in[i] = element)
+        for(int i=0; i < n; i++)
+            if(in[i] == element)
                 return i;
-        }
         return -1;
-    }
+}
     
 Node* solve(int in[], int pre[], int &index, int inStart, int inEnd, int n) {
-    if (index >= n || inStart > inEnd) {
+    // Base Case
+    if (index >= n || inStart > inEnd)
         return NULL;
-    }
+
+    // create a root node for element
     int element = pre[index++];
     Node* root = new Node(element);
+
+    // find element's index in inorder
     int position = findPosition(in,element,n);
 
     root->left = solve(in, pre, index, inStart, position-1, n);
@@ -57,9 +60,8 @@ void postOrder(Node* root) {
     cout << root->data << " ";
 }
 
-int main()
-{
-    int in[] = { 3, 1, 4, 0, 5, 2};
+int main() {
+    int in[] = {3, 1, 4, 0, 5, 2};
     int pre[] = {0, 1, 3, 4, 2, 5};
     int len = sizeof(in) / sizeof(in[0]);
     Node* root = buildTree(in, pre, len);
