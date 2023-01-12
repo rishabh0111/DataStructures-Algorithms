@@ -111,19 +111,21 @@ void BST::postOrder(Node* root) {
     cout << root->data << " ";
 }
 
-// Searching // Recursive
+//Searching // Iterative
 bool BST::search(Node* root, int key) {
-    if(root == NULL)
-        return false;
-    if(root->data == key)
-        return true;
-    if(root->data > key)
-        return search(root->left, key);
-    else
-        return search(root->right, key);
+    Node* temp = root;
+    while(temp != NULL){
+        if(temp->data == key)
+            return true;
+        if(temp->data > key)
+            temp = temp->left;
+        else
+            temp = temp->right;
+    }
+    return false;
 }
 // Time Complexity: Best: O(1) Average: O(logN) Worst: O(N)
-// Space complexity: O(h) , h = height of tree = logN
+// Space complexity: O(1), no recursion stack of size h
 
 Node* BST::minVal(Node* root) {
     Node* temp = root;
@@ -139,7 +141,10 @@ Node* BST::maxVal(Node* root) {
     return temp;
 }
 
-// Deletion
+/* Previous Approach can be optimized for two children case : 
+We can avoid recursive calls by keeping track of the parent node of the successor, 
+so that we can simply remove the successor by making the child of a parent NULL.
+We know that the successor would always be a leaf node. */
 Node* BST::remove(Node* root, int val) {
     // base case
     if(root == NULL)
@@ -165,10 +170,32 @@ Node* BST::remove(Node* root, int val) {
         }
         // 2 child:
         else if(root->left != NULL && root->right != NULL) {
-            int mini = minVal(root->right)->data;
-            root->data = mini;
-            root->right = remove(root->right, mini);
-            return root;
+        Node* succParent = root;
+ 
+        // Find successor
+        Node* succ = root->right;
+        while (succ->left != NULL) {
+            succParent = succ;
+            succ = succ->left;
+        }
+ 
+        // Delete successor.  Since successor
+        // is always left child of its parent
+        // we can safely make successor's right
+        // right child as left of its parent.
+        // If there is no succ, then assign
+        // succ->right to succParent->right
+        if (succParent != root)
+            succParent->left = succ->right;
+        else
+            succParent->right = succ->right;
+ 
+        // Copy Successor Data to root
+        root->data = succ->data;
+ 
+        // Delete Successor and return root
+        delete succ;
+        return root;
         }
     }
     else if(root->data > val) { // move left
@@ -181,8 +208,9 @@ Node* BST::remove(Node* root, int val) {
     }
     return NULL;
 }
-// Time Complexity: O(log N)
-// Auxiliary Space: O(log N), Space used for recursion stack
+// Time Complexity: O(h) ,where h is the height of the BST. 
+// Auxiliary Space: O(1).
+
 
 int main() {
     BST t;
