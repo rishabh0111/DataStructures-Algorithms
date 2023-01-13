@@ -1,11 +1,11 @@
 # DataStructures-Algorithms
 DSA implemented in C++ using Object Oriented Programming as much as possible.
 1. - [ ] Array
-- [ ] Matrix
-- [ ] String
-- [x] Search & Sort
-- [ ] Recursion & Backtracking
-- [ ] Hashing
-- [ ] Bit Manipulation
-- [x] Linked List
-- [x] Stack & Queue
+2. - [ ] Matrix
+3. - [ ] String
+4. - [x] Search & Sort
+5. - [ ] Recursion & Backtracking
+6. - [ ] Hashing
+7. - [ ] Bit Manipulation
+8. - [x] Linked List
+9. - [x] Stack & Queue
