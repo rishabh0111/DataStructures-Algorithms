@@ -58,16 +58,14 @@ Node* leftRotate(Node *x) {
 }
 
 // Get Balance factor of node N
-int getBalance(Node *N)
-{
+int getBalance(Node *N) {
 	if (N == NULL)
 		return 0;
     return height(N->left) - height(N->right);
 }
 
 // Inserting
-Node* insert(Node* node, int key)
-{
+Node* insert(Node* node, int key) {
 	/* 1. Perform the normal BST insertion */
 	if (node == NULL)
 		return(new Node(key));
