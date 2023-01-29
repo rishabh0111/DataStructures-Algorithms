@@ -107,7 +107,6 @@ void MinHeap::print() {
 int main() {
     MinHeap h(15);
     
-    // cout << "Entered 6 keys:- 3, 10, 12, 8, 2, 14" << endl;
     h.insert(5);
     h.insert(3);
     h.insert(17);
