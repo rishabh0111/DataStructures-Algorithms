@@ -8,13 +8,13 @@ A code repository containing the implementation and practice problems for Data S
 ### Progress
 | Name | Implementation | Problems |
 | --- | --- | --- |
-| Array | :x: | :x: |
-| Matrix | :x: | :x: |
-| String | :x: | :x: |
+| Array | - | :x: |
+| Matrix | - | :x: |
+| String | - | :x: |
 | Search & Sort | :heavy_check_mark: | :x: |
-| Recursion & Backtracking | :x: | :x: |
+| Recursion & Backtracking | - | :x: |
 | Hashing | :x: | :x: |
-| Bit Manipulation | :x: | :x: |
+| Bit Manipulation | - | :x: |
 | Linked List | :heavy_check_mark: | :x: |
 | Stack & Queue | :heavy_check_mark: | :x: |
 | Binary Tree | :heavy_check_mark: | :x: |
