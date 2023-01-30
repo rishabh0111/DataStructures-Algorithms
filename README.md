@@ -15,5 +15,5 @@ DSA implemented in C++ using Object Oriented Programming as much as possible.
 13. - [ ] Greedy
 14. - [ ] Dynamic Programming
 15. - [x] Heap
-16. - [ ] Graph
+16. - [x] Graph
 17. - [ ] Trie
