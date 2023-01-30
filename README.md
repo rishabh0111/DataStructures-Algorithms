@@ -1,7 +1,11 @@
 # DataStructures-Algorithms
-DSA implemented in C++ using Object Oriented Programming as much as possible.
+A code repository containing the implementation and practice problems for Data Structures and Algorithms in C++.
 
+### Features
+- Object Oriented Programming (OOPs) paradigm implementations as much as possible.
+- Similar naming conventions throughout every Data Structure.
 
+### Progress
 | Name | Implementation | Problems |
 | --- | --- | --- |
 | Array | :x: | :x: |
@@ -16,8 +20,8 @@ DSA implemented in C++ using Object Oriented Programming as much as possible.
 | Binary Tree | :heavy_check_mark: | :x: |
 | Binary Search Tree | :heavy_check_mark: | :x: |
 | AVL, RedBlack & B Trees | :heavy_check_mark: | :x: |
-| Greedy | :x: | :x: |
-| Dynamic Programming | :x: | :x: |
+| Greedy | - | :x: |
+| Dynamic Programming | - | :x: |
 | Heap | :heavy_check_mark: | :x: |
 | Graph | :heavy_check_mark: | :x: |
 | Trie | :x: | :x: |
