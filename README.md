@@ -1,19 +1,23 @@
 # DataStructures-Algorithms
 DSA implemented in C++ using Object Oriented Programming as much as possible.
-1. - [ ] Array
-2. - [ ] Matrix
-3. - [ ] String
-4. - [x] Search & Sort
-5. - [ ] Recursion & Backtracking
-6. - [ ] Hashing
-7. - [ ] Bit Manipulation
-8. - [x] Linked List
-9. - [x] Stack & Queue
-10. - [x] Binary Tree
-11. - [x] Binary Search Tree
-12. - [x] AVL, RedBlack & B Trees
-13. - [ ] Greedy
-14. - [ ] Dynamic Programming
-15. - [x] Heap
-16. - [x] Graph
-17. - [ ] Trie
+
+
+| Implementation | Problems |
+| --- | --- |
+| [ ] | Array |
+| [ ] | Matrix |
+| [ ] | String |
+| [x] | Search & Sort |
+| [ ] | Recursion & Backtracking |
+| [ ] | Hashing |
+| [ ] | Bit Manipulation |
+| [x] | Linked List |
+| [x] | Stack & Queue |
+| [x] | Binary Tree |
+| [x] | Binary Search Tree |
+| [x] | AVL, RedBlack & B Trees |
+| [ ] | Greedy |
+| [ ] | Dynamic Programming |
+| [x] | Heap |
+| [x] | Graph |
+| [ ] | Trie |
