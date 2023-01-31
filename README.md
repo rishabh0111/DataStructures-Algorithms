@@ -13,7 +13,7 @@ A code repository containing the implementation and practice problems for Data S
 | String | - | :x: |
 | Search & Sort | :heavy_check_mark: | :x: |
 | Recursion & Backtracking | - | :x: |
-| Hashing | :x: | :x: |
+| Hashing | :heavy_check_mark: | :x: |
 | Bit Manipulation | - | :x: |
 | Linked List | :heavy_check_mark: | :x: |
 | Stack & Queue | :heavy_check_mark: | :x: |
