@@ -1,30 +1,31 @@
 #include <iostream>
+using namespace std;
 
 // Function using pass by value
-void incrementByValue(int num) {
-    num += 10;
-    std::cout << "Inside incrementByValue: " << num << std::endl;
+void incrementByValue(int n) {
+    n += 10;
+    cout << "Inside incrementByValue: " << n << endl;
 }
 
 // Function using pass by reference
-void incrementByReference(int& num) {
-    num += 10;
-    std::cout << "Inside incrementByReference: " << num << std::endl;
+void incrementByReference(int& n) {
+    n += 10;
+    cout << "Inside incrementByReference: " << n << endl;
 }
 
 int main() {
     int num = 5;
     
-    std::cout << "Before function calls: " << num << std::endl;
+    cout << "Before function calls: " << num << endl;
     
     // Call the function using pass by value
     incrementByValue(num);
-    std::cout << "After function calls: " << num << std::endl;
+    cout << "After function calls: " << num << endl;
     
     // Call the function using pass by reference
     incrementByReference(num);
     
-    std::cout << "After function calls: " << num << std::endl;
+    cout << "After function calls: " << num << endl;
     
     return 0;
 }
