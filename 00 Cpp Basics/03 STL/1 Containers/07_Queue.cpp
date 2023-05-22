@@ -17,3 +17,14 @@ int main() {
 
 	//size(), empty(), swap() are same
 }
+
+/*
+Function    | Time Complexity | Space Complexity
+-------------------------------------------------
+q.push(x)   | O(1)            | O(1)
+q.pop( )    | O(1)            | O(1)
+q.front( )  | O(1)            | O(1)
+q.back( )   | O(1)            | O(1)
+q.empty( )  | O(1)            | O(1)
+q.size( )   | O(1)            | O(1)
+*/

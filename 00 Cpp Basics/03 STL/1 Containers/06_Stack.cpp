@@ -27,3 +27,12 @@ int main() {
 
 	return 0;
 }
+
+/*
+Function    | Time Complexity | Space Complexity
+-------------------------------------------------
+s.top( )    | O(1)            | O(1)
+s.pop( )    | O(1)            | O(1)
+s.empty( )  | O(1)            | O(1)
+s.push(x)   | O(1)            | O(1)
+*/

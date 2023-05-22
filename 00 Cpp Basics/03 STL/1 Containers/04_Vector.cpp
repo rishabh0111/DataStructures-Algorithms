@@ -92,3 +92,15 @@ int main() {
 
 		return 0;
 }
+
+/*
+Function                        | Time Complexity   | Space Complexity
+---------------------------------------------------------------------
+sort(v.begin( ), v.end( ))      | Theta(nlog(n))    | Theta(log n)
+reverse(v.begin( ), v.end( ))   | O(n)              | O(1)
+v.push_back(x)                  | O(1)              | O(1)
+v.pop_back(x)                   | O(1)              | O(1)
+v.size()                        | O(1)              | O(1)
+v.clear()                       | O(n)              | O(1)
+v.erase()                       | O(n)              | O(1)
+*/

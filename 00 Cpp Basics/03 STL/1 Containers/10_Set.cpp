@@ -3,6 +3,12 @@
 #include <unordered_set>
 using namespace std;
 
+/*
+Set (set<int> s) is the implementation of Binary Search Trees.
+Unordered set (unordered_set<int> S) is the implementation of Hash Table.
+Multiset (multiset<int> S) is implementation of Red-Black trees.
+*/
+
 int main() {
     //begin(), end(), rbegin(), rend(), crbegin, crend(), cbegin(), cend() are same as in all containers.
 	//size(), max_size(), empty() also same
@@ -88,3 +94,14 @@ int main() {
 	cout << ms.count(3) << endl;
 	return 0;
 }
+
+/*
+Function   | Time Complexity | Space Complexity
+-----------------------------------------------
+s.find( )  | O(log n)        | O(1)
+s.insert(x) | O(log n)        | O(1)
+s.erase(x)  | O(log n)        | O(1)
+s.size()   | O(1)            | O(1)
+s.empty( ) | O(1)            | O(1)
+
+*/

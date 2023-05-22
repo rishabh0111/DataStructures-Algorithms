@@ -20,7 +20,19 @@ int main() {
 
 	cout << pq1.top() << endl;
 
+	// Min Heap can be implemented using the below syntax:
+	priority_queue<int, vector<int>, greater<int>> pq2;
+
 	//empty(), size(), & swap() are same
 
 	return 0;
 }
+
+/*
+Function   | Time Complexity | Space Complexity
+-----------------------------------------------
+Q.top()    | O(1)            | O(1)
+Q.push()   | O(log n)        | O(1)
+Q.pop()    | O(log n)        | O(1)
+Q.empty()  | O(1)            | O(1)
+*/
